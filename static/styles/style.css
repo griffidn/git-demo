@@ -1,0 +1,45 @@
+body {
+margin : 0 ;
+padding : 0 ;
+font-size :
+100% ;
+line-height: 1.5;
+font-family: Helvetica, Arial, sans-serif;
+}
+h1 , h2 , h3 , h4 {
+margin : 1em 0 . 5em ; line-height : 1.25
+}
+
+h1 {
+font-size : 20px
+}
+
+h2 {
+font-size : 16px
+
+}
+h3 {
+font-size : 12px
+}
+
+ul , ol {
+margin : 1em 0 ;
+padding-left : 40px
+}
+
+p {
+margin : 1em 0 ;
+color : Red
+}
+
+.experiment {
+display: none;
+color: blue;
+font-size:10px;
+background-color: grey;
+}
+
+.outline {
+    border: 1px solid grey;
+}
+

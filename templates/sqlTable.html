@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>SQL Table</title>
+      <style>
+           .tableBG{
+             background-color: #A8A8A8;
+           }
+           .rowBG{
+             background-color: white;
+             padding: 5px;
+           }
+      </style>
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.min.js"
+         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+         crossorigin="anonymous"></script>
+      <script language="Javascript">
+      </script>
+   </head>
+   <body>
+
+      <a href="/" style="decoration: none">Reset</a><br/>
+      <table id="sqlTable" class="tableBG">
+          <tr>
+          {%for col in header%}
+              <th bgcolor="white" class="rowBG">{{col.0}}</th>
+          {%endfor%}
+          </tr>
+          {%for row in sql%}
+              <tr>
+                 {%for col in row%}
+                    <td class="rowBG">{{col}}</td>
+                 {%endfor%}
+              </tr>
+          {%endfor%}
+      </table>
+
+      <a href="/" style="decoration: none">Reset</a><br/>
+   </body>
+</html>

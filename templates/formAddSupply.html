@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:type="http://www.w3.org/1999/xhtml">
+   <head>
+      <title>Add Supply</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!--<link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">-->
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.min.js"
+         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+         crossorigin="anonymous"></script>
+      <script language="Javascript">
+      </script>
+   </head>
+   <body>
+
+      <div class="container">
+      <form action="/addSupply" method="post">
+         <div class="form-group">
+         <label for="supply_name">Supply Type</label>
+         <input type="text" id="supply_name" class="form-control" name="supply_name" value="">
+        {% if errors and errors['supply_name'] %}
+            <small style="color:Red;">{{ errors['supply_name'] }}</small><br/>
+        {% endif %}
+         </div>
+         <div class="form-group">
+         <label for="supply_brand">Supply Brand</label>
+         <input type="text" id="supply_brand" class="form-control" name="supply_brand" value="">
+        {% if errors and errors['supply_brand'] %}
+            <small style="color:Red;">{{ errors['supply_brand'] }}</small><br/>
+        {% endif %}
+         </div>
+         <div class="form-group">
+         <label for="cost">Cost</label>
+         <input type="text" id="cost" class="form-control" name="cost" value="">
+        {% if errors and errors['cost'] %}
+            <small style="color:Red;">{{ errors['cost'] }}</small><br/>
+        {% endif %}
+          </div>
+          <div class="form-group">
+          <select name="supply_type"class="form-control" >
+             <option value="PEN">Pen</option>
+             <option value="PENCIL">Pencil</option>
+             <option value="PAPER">Paper</option>
+          </select><br/>
+          </div>
+          <div class="form-group">
+          <input type="radio" name="in_stock" value="I"> In Stock
+          <input type="radio" name="in_stock" value="O" checked> Out of Stock<br/>
+          </div>
+         <input type="submit" value="Submit">
+      </form>
+      <a href="/" style="decoration: none">Reset</a><br/>
+      </div>
+
+   </body>
+</html>

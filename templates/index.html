@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Title of page</title>
+      <!-- head definitions go here -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!--<link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">-->
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.min.js"
+         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+         crossorigin="anonymous"></script>
+      <script language="JavaScript">
+         $(function() {  //once the document is ready
+             $('.experiment')
+             .hide();
+         })
+
+         $( document ).ready(function() {
+             $( "#hider" ).click(function( event ) {
+                 $(".experiment" ).toggle();
+             });
+         });
+
+      </script>
+   </head>
+   <body>
+      <!-- the content goes here -->
+      <a href="?username=testname">Set username to 'testname'</a>
+      <p>Username: {{ name }}</p>
+      <a href="/formAddSupply">Form</a><br/>
+      <a href="/">Reset</a><br/>
+      <img src="{{ url_for('static',filename='images/mypic.jpg') }}" style="height:50px;width:100px"><br/>
+      <button id="hider">Click Me</button><br/>
+      <a href="/sqltest">Test DB conn</a><br/>
+      <a href="/HelloWorld">Hello World</a>
+      <form action="/sqltest" method="post">
+         <label for="table">Table To Query</label>
+         <input type="text" id="table" class="form-control" name="table" value="dgriffith/ngtsav0">
+         <input type="submit" value="Select *">
+      </form>
+      <div class="experiment">
+         <span>
+         This is some text in a div with a styled class
+         </span>
+      </div>
+   </body>
+</html>

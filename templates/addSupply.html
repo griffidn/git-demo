@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Add Supply</title>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <!--<link rel="stylesheet" href="{{ url_for('static',filename='styles/style.css') }}">-->
+      <script
+         src="https://code.jquery.com/jquery-3.4.1.min.js"
+         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+         crossorigin="anonymous"></script>
+      <script language="Javascript">
+      </script>
+   </head>
+   <body>
+      <table>
+          <tr>
+              <td class="thead">Name</td><td>{{ supply_name }}</td>
+          </tr>
+          <tr>
+              <td class="thead">Brand</td><td>{{ supply_brand }}</td>
+          </tr>
+          <tr>
+              <td class="thead">Supply</td><td>{{ supply_type }}</td>
+          </tr>
+          <tr>
+              <td class="thead">Status</td><td>{{ in_stock }}</td>
+          </tr>
+      </table>
+
+      <a href="/" style="decoration: none">Reset</a><br/>
+   </body>
+</html>
